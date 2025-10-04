@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness in Practice: Psicología Positiva y Resiliencia Comunitaria</title>
+    <!-- Carga de Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f8fb; /* Fondo muy claro */
+        }
+        .text-shadow-md {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .activity-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#4F46E5', /* Indigo / Blue for professionalism */
+                        'happy-yellow': '#FBBF24', /* Amber for happiness/sunlight */
+                        'resilience-green': '#10B981', /* Emerald for resilience/well-being */
+                        'solis': '#EF4444', /* Red for SOLIS (Coordinator) */
+                        'pfe': '#FCD34D', /* Yellow for PFE */
+                        'esa': '#34D399', /* Green for ESA */
+                    }
+                }
+            }
+        }
+
+        // Script para alternar la visibilidad de las metodologías
+        function toggleMethodology(id) {
+            const content = document.getElementById(id);
+            const button = document.querySelector(`#btn-${id}`);
+            const isHidden = content.classList.toggle('hidden');
+
+            if (isHidden) {
+                button.textContent = 'Ver más';
+            } else {
+                button.textContent = 'Ver menos';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="bg-primary-blue text-white shadow-xl">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-xs font-semibold uppercase tracking-wider opacity-90">
+                Proyecto Erasmus+ KA210-ADU N° 2025-1-IT02-KA210-ADU-000350376
+            </h1>
+            <h2 class="mt-2 text-5xl sm:text-6xl font-extrabold tracking-tight text-happy-yellow text-shadow-md">
+                HAPPINESS
+            </h2>
+            <p class="mt-4 max-w-2xl text-2xl mx-auto font-light leading-relaxed">
+                Felicidad en la Práctica: Psicología Positiva y Resiliencia Comunitaria
+            </p>
+            <div class="mt-8">
+                <a href="#objetivos" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-primary-blue bg-happy-yellow hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                    Descubre los Objetivos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRODUCCIÓN Y PROBLEMA -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6">Un enfoque holístico para el bienestar adulto</h3>
+            <p class="text-lg text-gray-600 mb-8">
+                En la región europea, la salud mental es una preocupación creciente, especialmente para los **adultos de 35 a 60 años** que navegan por múltiples presiones (familia, trabajo, finanzas) y muestran baja satisfacción vital. El proyecto **HAPPINESS** se dirige a esta vulnerabilidad, enfocándose en la **prevención no clínica** y el **empoderamiento** a través de la educación.
+            </p>
+            <div class="border-t border-b border-gray-200 py-6">
+                <p class="text-xl font-semibold text-resilience-green">
+                    **Dato clave:** El 46% de los europeos experimentó problemas psicosociales en el último año, pero el 54% no buscó ayuda profesional. Nuestro proyecto ofrece una alternativa educativa y accesible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVOS OBJETIVOS ESPECÍFICOS (Del PDF) -->
+    <section id="objetivos" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-gray-800 mb-12">Objetivos Específicos del Proyecto</h3>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Objetivo 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                    <span class="text-2xl block mb-2">&#128170;</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-1">Entrenamiento Basado en Evidencia</h4>
+                    <p class="text-sm text-gray-600">Entrenar a adultos en **técnicas de psicología positiva** para aumentar el bienestar, la resiliencia y la felicidad.</p>
+                </div>
+                <!-- Objetivo 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-resilience-green">
+                    <span class="text-2xl block mb-2">&#128220;</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-1">Herramientas Prácticas para Formadores</h4>
+                    <p class="text-sm text-gray-600">Proporcionar a los formadores métodos y técnicas para apoyar la salud mental, especialmente enfocados en **grupos marginalizados**.</p>
+                </div>
+                <!-- Objetivo 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-happy-yellow">
+                    <span class="text-2xl block mb-2">&#129505;</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-1">Fomentar la Comunidad</h4>
+                    <p class="text-sm text-gray-600">Fomentar una **comunidad de apoyo** creando redes de ayuda mutua a través de grupos y actividades creativas.</p>
+                </div>
+                <!-- Objetivo 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-blue">
+                    <span class="text-2xl block mb-2">&#127757;</span>
+                    <h4 class="text-lg font-bold text-gray-800 mb-1">Conexión con la Sostenibilidad</h4>
+                    <p class="text-sm text-gray-600">Promover la conexión entre el **bienestar ambiental** y la salud mental/emocional de la comunidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOLOGÍAS CLAVE (Se mantiene) -->
+    <section id="metodologia" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-gray-800 mb-12">Nuestras Metodologías Innovadoras</h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Psicología Positiva -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-primary-blue">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-blue text-white mb-4 text-2xl">
+                        &#10084;&#65039;
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Psicología Positiva Aplicada</h4>
+                    <p class="text-gray-600">
+                        Entrenamiento basado en fortalezas, gratitud y emociones positivas. Usamos las "10 Claves para una Vida más Feliz" para proporcionar un marco estructurado de bienestar.
+                    </p>
+                    <div id="content-pp" class="mt-4 text-sm text-gray-700 hidden">
+                        <p class="mt-2">**Técnicas:** Ejercicios de gratitud, identificación de fortalezas personales y estrategias de afrontamiento proactivo para el estrés y la ansiedad.</p>
+                    </div>
+                    <button id="btn-content-pp" onclick="toggleMethodology('content-pp')" class="mt-4 text-primary-blue hover:text-indigo-700 font-semibold text-sm">
+                        Ver más
+                    </button>
+                </div>
+
+                <!-- Tarjeta 2: Yoga de la Risa -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-happy-yellow">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-happy-yellow text-gray-800 mb-4 text-2xl">
+                        &#128512;
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Laughter Yoga (Yoga de la Risa)</h4>
+                    <p class="text-gray-600">
+                        Método innovador que combina ejercicios de respiración y risa intencional en grupo para liberar endorfinas y reducir los niveles de cortisol (hormona del estrés).
+                    </p>
+                    <div id="content-ly" class="mt-4 text-sm text-gray-700 hidden">
+                        <p class="mt-2">**Beneficios:** Mejora de la función respiratoria, refuerzo del sistema inmune y fomento de la conexión social y el sentido de comunidad.</p>
+                    </div>
+                    <button id="btn-content-ly" onclick="toggleMethodology('content-ly')" class="mt-4 text-primary-blue hover:text-indigo-700 font-semibold text-sm">
+                        Ver más
+                    </button>
+                </div>
+
+                <!-- Tarjeta 3: Arte y Empatía -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border-t-4 border-resilience-green">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-resilience-green text-white mb-4 text-2xl">
+                        &#127917;
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Teatro Social y Círculos de Empatía</h4>
+                    <p class="text-gray-600">
+                        Uso de Dramaterapia y Teatro Autobiográfico para la autoexpresión. Los Círculos de Empatía fomentan el diálogo estructurado y la escucha profunda para la resiliencia comunitaria.
+                    </p>
+                    <div id="content-ec" class="mt-4 text-sm text-gray-700 hidden">
+                        <p class="mt-2">**Enfoque:** Crear un "Espacio Seguro" para la integración social, especialmente para migrantes y personas en situación de vulnerabilidad.</p>
+                    </div>
+                    <button id="btn-content-ec" onclick="toggleMethodology('content-ec')" class="mt-4 text-primary-blue hover:text-indigo-700 font-semibold text-sm">
+                        Ver más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS DEL PROYECTO (Se mantiene) -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-primary-blue text-white">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-happy-yellow mb-12">Resultados Principales y Recursos Abiertos</h3>
+
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Toolkit -->
+                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg border-b-8 border-happy-yellow">
+                    <h4 class="text-2xl font-bold mb-3 flex items-center">
+                        <span class="mr-3 text-happy-yellow text-3xl">&#128187;</span> Kit de Herramientas de Felicidad (Happiness Toolkit)
+                    </h4>
+                    <p class="mb-4">
+                        Un recurso **digital, interactivo y multilingüe** diseñado para el autoaprendizaje. Incluye ejercicios de bienestar, tutoriales en vídeo y herramientas de autoevaluación.
+                    </p>
+                    <p class="text-sm font-semibold text-gray-600">
+                        Liderado por: **PFE (Bélgica)**
+                    </p>
+                </div>
+
+                <!-- CoP -->
+                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg border-b-8 border-resilience-green">
+                    <h4 class="text-2xl font-bold mb-3 flex items-center">
+                        <span class="mr-3 text-resilience-green text-3xl">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;</span> Comunidad de Práctica (CoP)
+                    </h4>
+                    <p class="mb-4">
+                        Un espacio **virtual** para fomentar el compromiso a largo plazo y la conexión entre los participantes y educadores. Sirve como red de apoyo para reforzar las estrategias de bienestar.
+                    </p>
+                    <p class="text-sm font-semibold text-gray-600">
+                        Liderado por: **PFE (Bélgica)**
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- NUEVA SECCIÓN DE ACTIVIDADES Y RESPONSABLES (DEL PDF) -->
+    <section id="actividades" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-gray-800 mb-12">Fases y Liderazgo de Actividades</h3>
+            <p class="text-center text-lg text-gray-600 mb-10">Cada actividad está liderada por un socio clave, asegurando el mejor uso de la experiencia de cada organización.</p>
+
+            <div class="space-y-8">
+                <!-- Fila de Actividades de Coordinación y Talleres -->
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-solis">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 1</p>
+                        <h4 class="font-bold text-lg text-gray-800">Gestión y Coordinación</h4>
+                        <p class="text-sm text-gray-700">Responsable: **SOLIS SRLS** 🇮🇹 (Italia)</p>
+                    </div>
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-solis">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 2</p>
+                        <h4 class="font-bold text-lg text-gray-800">Primer Taller Internacional</h4>
+                        <p class="text-sm text-gray-700">Responsable: **SOLIS SRLS** 🇮🇹 (Italia)</p>
+                    </div>
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-esa">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 3</p>
+                        <h4 class="font-bold text-lg text-gray-800">Círculos de Empatía</h4>
+                        <p class="text-sm text-gray-700">Responsable: **ESA** 🇪🇸 (España)</p>
+                    </div>
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-esa">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 4</p>
+                        <h4 class="font-bold text-lg text-gray-800">Segundo Taller Internacional</h4>
+                        <p class="text-sm text-gray-700">Responsable: **ESA** 🇪🇸 (España)</p>
+                    </div>
+                </div>
+                
+                <!-- Fila de Actividades de Resultados y Difusión -->
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-solis">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 5</p>
+                        <h4 class="font-bold text-lg text-gray-800">Talleres Locales de Felicidad</h4>
+                        <p class="text-sm text-gray-700">Responsable: **SOLIS SRLS** 🇮🇹 (Italia)</p>
+                    </div>
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-pfe">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 6</p>
+                        <h4 class="font-bold text-lg text-gray-800">Comunidad de Práctica (CoP)</h4>
+                        <p class="text-sm text-gray-700">Responsable: **PFE** 🇧🇪 (Bélgica)</p>
+                    </div>
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-pfe">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 7</p>
+                        <h4 class="font-bold text-lg text-gray-800">Happiness Toolkit (Kit de Herramientas)</h4>
+                        <p class="text-sm text-gray-700">Responsable: **PFE** 🇧🇪 (Bélgica)</p>
+                    </div>
+                    <div class="activity-card bg-gray-50 p-5 rounded-xl border-l-8 border-esa">
+                        <p class="text-xs font-semibold text-gray-500 mb-1">Actividad 8</p>
+                        <h4 class="font-bold text-lg text-gray-800">Comunicación y Difusión</h4>
+                        <p class="text-sm text-gray-700">Responsable: **ESA** 🇪🇸 (España)</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="mt-12 p-6 bg-primary-blue text-white rounded-xl shadow-xl">
+                <p class="text-center text-lg font-semibold">
+                    **¿Quieres conocer a los beneficiarios?** El proyecto impactará directamente a **15 adultos (35-60 años)** en situaciones vulnerables y **9 formadores/educadores** de las organizaciones socias.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIOS (Se mantiene, pero se actualiza la descripción de PFE y ESA) -->
+    <section id="socios" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center text-gray-800 mb-12">Nuestros Socios Transnacionales</h3>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Partner 1: SOLIS SRLS (IT) - Coordinator -->
+                <div class="p-6 rounded-xl shadow-lg border-l-4 border-solis hover:bg-white transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800">SOLIS SRLS</h4>
+                    <p class="text-gray-600 mb-2">Coordinador del Proyecto</p>
+                    <p class="text-3xl">🇮🇹</p>
+                    <p class="text-sm text-gray-500 mt-2">Pyme dedicada a la innovación social, teatro autobiográfico y facilitación participativa. Lidera la coordinación y los talleres de formación inicial.</p>
+                </div>
+
+                <!-- Partner 2: PROJECTS FOR EUROPE PFE (BE) -->
+                <div class="p-6 rounded-xl shadow-lg border-l-4 border-pfe hover:bg-white transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800">PROJECTS FOR EUROPE PFE</h4>
+                    <p class="text-gray-600 mb-2">Socio</p>
+                    <p class="text-3xl">🇧🇪</p>
+                    <p class="text-sm text-gray-500 mt-2">Organización enfocada en la dimensión europea, formación, investigación y redes. Lidera la creación del Toolkit y la Comunidad de Práctica.</p>
+                </div>
+
+                <!-- Partner 3: ASOCIACIÓN EUROPEAN SOCIAL ART (ES) -->
+                <div class="p-6 rounded-xl shadow-lg border-l-4 border-esa hover:bg-white transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800">ASOCIACIÓN EUROPEAN SOCIAL ART (ESA)</h4>
+                    <p class="text-gray-600 mb-2">Socio</p>
+                    <p class="text-3xl">🇪🇸</p>
+                    <p class="text-sm text-gray-500 mt-2">Especialistas en Teatro Social, artes escénicas y participación comunitaria. Lidera los Círculos de Empatía y la Comunicación/Difusión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-lg font-semibold mb-2">Proyecto HAPPINESS (KA210-ADU)</p>
+                <p class="text-sm text-gray-400">
+                    Liderando la innovación en la educación de adultos para el bienestar y la resiliencia en Europa.
+                </p>
+                <div class="mt-4 text-xs text-gray-500">
+                    <p>Proyecto cofinanciado por el programa Erasmus+ de la Unión Europea.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
